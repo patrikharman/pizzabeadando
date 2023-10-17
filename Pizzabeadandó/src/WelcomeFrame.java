@@ -13,6 +13,8 @@ import javax.swing.JOptionPane;
  */
 public class WelcomeFrame extends javax.swing.JFrame {
 
+    private String pizza;
+
     /**
      * Creates new form WelcomeFrame
      */
@@ -520,7 +522,33 @@ public class WelcomeFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jRadioButton1ActionPerformed
 
     private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
-     JOptionPane.showMessageDialog(rootPane, "Köszönjük a rendelését!");
+     boolean vanMargherita = jRadioButton1.isSelected();
+     boolean vanSonkas = jRadioButton3.isSelected();
+     boolean vanVega = jRadioButton4.isSelected();
+     boolean vanHusimado = jRadioButton5.isSelected();
+     boolean vanSajtos = jRadioButton6.isSelected();
+     
+     if (vanMargherita) {
+        pizza = "Margherita";
+}else   if (vanSonkas) {
+        pizza = "Sonkás kukoricás";
+}else  if (vanVega) {
+        pizza = "Vega";
+}else  if (vanHusimado) {
+        pizza = "Húsímádó";
+}else  if (vanSajtos) {
+        pizza = "Négy sajtos";
+} else {
+        pizza = "Nem választottál pizzát";
+}
+
+
+JOptionPane.showMessageDialog(rootPane, "A választott pizza: " + pizza);
+             
+        
+        
+        
+        
     }//GEN-LAST:event_jToggleButton1ActionPerformed
 
     private void jToggleButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton2ActionPerformed
